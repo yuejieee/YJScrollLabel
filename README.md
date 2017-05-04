@@ -16,9 +16,6 @@ iOS 9.0+
 
 CocoaPods
 ```
-use_frameworks!
-
-# Latest release in CocoaPods
 pod 'YJScrollLabel'
 ```
 
