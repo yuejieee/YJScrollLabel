@@ -78,10 +78,11 @@ class ScrollLabel: UIView {
      * alignment: 文字对齐方式
      * font: 字体大小
      */
-    func setTitle(_ title: NSString, _ alignment: NSTextAlignment = .left, _ font: UIFont = UIFont.systemFont(ofSize: 15)) {
+    func setTitle(_ title: NSString, _ color: UIColor = UIColor.black, _ alignment: NSTextAlignment = .left, _ font: UIFont = UIFont.systemFont(ofSize: 15)) {
         self.contentLabel.text = title as String
         self.contentLabel.textAlignment = alignment
         self.contentLabel.font = font
+        self.contentLabel.textColor = color
         self.contentLabel.sizeToFit()
     }
 }

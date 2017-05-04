@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YJScrollLabel"
-  s.version      = "0.0.2"
-  s.summary      = "A scrollable label to show long string."
+  s.version      = "0.0.3"
+  s.summary      = "A scrollable label to show string."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/yuejieee/YJScrollLabel.git", :tag => "0.0.2" }
+  s.source       = { :git => "https://github.com/yuejieee/YJScrollLabel.git", :tag => "0.0.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "YJScrollLabel", "YJScrollLabel/YJScrollLabel/*.{swift}"
+  s.source_files  = "YJScrollLabel", "YJScrollLabel/YJScrollLabel/YJScrollLabel.{swift}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -130,7 +130,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  s.requires_arc = true
+  # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "YJScrollLabel", "~> 0.0.1"
