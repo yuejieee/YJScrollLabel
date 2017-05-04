@@ -1,5 +1,4 @@
 # YJScrollLabel
-a scrollable label to show string
 ## Description
 项目过程中会遇到一些要展示的字符串过长，我们所定义的label无法完整显示这个字符串的内容，为了解决这个问题就封装了一个可以滚动显示字符串内容的Label，可根据字符串长度进行往复滚动显示。
 ## Perview 
