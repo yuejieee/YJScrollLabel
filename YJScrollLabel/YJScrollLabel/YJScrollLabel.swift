@@ -8,19 +8,19 @@
 
 import UIKit
 
-public class ScrollLabel: UIView {
+class YJScrollLabel: UIView {
     
     private var scrollView: UIScrollView!
     private var contentLabel: UILabel!
     public var scrollInterval: Double = 10 // scrollInterval: defualt 10s
     
-    override public init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.setupSubviews(frame)
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
