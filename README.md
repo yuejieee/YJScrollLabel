@@ -22,6 +22,8 @@ pod 'YJScrollLabel'
 ## Usage
 
 ```
+  import YJScrollView
+
   let rect = CGRect.init(x: 0, y: 0, width: 250, height: 30)
   let scrollLabel = ScrollLabel.init(frame: rect)
   scrollLabel.center = self.view.center
