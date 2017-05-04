@@ -8,19 +8,19 @@
 
 import UIKit
 
-class ScrollLabel: UIView {
+public class ScrollLabel: UIView {
     
     private var scrollView: UIScrollView!
     private var contentLabel: UILabel!
     public var scrollInterval: Double = 10 // scrollInterval: defualt 10s
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         
         self.setupSubviews(frame)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -36,7 +36,7 @@ class ScrollLabel: UIView {
         self.contentLabel.textColor = UIColor.black
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         self.scrollView.frame = self.bounds
