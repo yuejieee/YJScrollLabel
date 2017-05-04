@@ -18,5 +18,8 @@
 
 ## Method
 
-`func setTitle(_ title: NSString, _ alignment: NSTextAlignment = .left, _ font: UIFont = UIFont.systemFont(ofSize: 15))`
+```
+func setTitle(_ title: NSString, _ alignment: NSTextAlignment = .left, _ font: UIFont = UIFont.systemFont(ofSize: 15))
+```
+
 主要用来设置label显示的内容，字体，对齐方式。因为对齐方式和字体存在默认值，方法调用时可只进行title的设置。
