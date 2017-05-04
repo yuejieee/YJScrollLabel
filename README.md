@@ -6,6 +6,22 @@
 <img src="https://github.com/yuejieee/YJScrollLabel/blob/master/YJScrollLabel/Image/PreviewImage.gif" width="500"/>
 </div>
 
+## Requirements
+
+Swift 3.0
+Xcode 8
+iOS 9.0+
+
+## Installation
+
+CocoaPods
+```
+use_frameworks!
+
+# Latest release in CocoaPods
+pod 'YJScrollLabel'
+```
+
 ## Usage
 
 ```
