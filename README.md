@@ -8,8 +8,8 @@
 
 ## Requirements
 
-Swift 3.0
-Xcode 8
+Swift 3.0 <br>
+Xcode 8 <br>
 iOS 9.0+
 
 ## Installation
