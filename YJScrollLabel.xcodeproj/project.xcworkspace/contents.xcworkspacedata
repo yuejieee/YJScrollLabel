@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ScrollLabel.xcodeproj">
+      location = "self:/Users/Kingpin/Desktop/YJScrollLabelLibrary/YJScrollLabel.xcodeproj">
    </FileRef>
 </Workspace>

@@ -11,7 +11,8 @@ import UIKit
 class ScrollLabel: UIView {
     
     private var scrollView: UIScrollView!
-    private var label: UILabel!
+    private var contentLabel: UILabel!
+    var scrollInterval: Double = 10 // scrollInterval: defualt 10s
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,32 +30,31 @@ class ScrollLabel: UIView {
         self.scrollView.frame = frame
         self.scrollView.isScrollEnabled = false
         
-        self.label = UILabel()
-        self.label.frame = frame
-        self.scrollView.addSubview(self.label)
-        self.label.textColor = UIColor.black
+        self.contentLabel = UILabel()
+        self.contentLabel.frame = frame
+        self.scrollView.addSubview(self.contentLabel)
+        self.contentLabel.textColor = UIColor.black
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-    
+        
         self.scrollView.frame = self.bounds
-        self.scrollView.contentSize = CGSize.init(width: self.label.frame.size.width, height: 0)
+        self.scrollView.contentSize = CGSize.init(width: self.contentLabel.frame.size.width, height: 0)
         
-        self.label.center = CGPoint.init(x: self.label.frame.size.width / 2, y: self.scrollView.center.y)
-        
-        if self.label.frame.size.width > self.scrollView.frame.size.width {
+        self.contentLabel.center = CGPoint.init(x: self.contentLabel.frame.size.width / 2, y: self.scrollView.center.y)
+        if self.contentLabel.frame.size.width > self.scrollView.frame.size.width {
             self.setAnimate()
         }
     }
     
     private func setAnimate() {
         let offsetX = self.scrollView.contentOffset.x
-        let labelW = self.label.frame.size.width
+        let labelW = self.contentLabel.frame.size.width
         let scrollW = self.scrollView.frame.size.width
         
         if offsetX == 0 {
-            UIView.animate(withDuration: 10, animations: {
+            UIView.animate(withDuration: self.scrollInterval, animations: {
                 self.scrollView.contentOffset = CGPoint.init(x: labelW - scrollW, y: 0)
             }) { (finish) in
                 if finish {
@@ -62,7 +62,7 @@ class ScrollLabel: UIView {
                 }
             }
         } else {
-            UIView.animate(withDuration: 10, animations: {
+            UIView.animate(withDuration: self.scrollInterval, animations: {
                 self.scrollView.contentOffset = CGPoint.init(x: 0, y: 0)
             }) { (finish) in
                 if finish {
@@ -71,7 +71,7 @@ class ScrollLabel: UIView {
             }
         }
     }
-
+    
     // MARK: - public method
     /*
      * title: label内容
@@ -79,13 +79,9 @@ class ScrollLabel: UIView {
      * font: 字体大小
      */
     func setTitle(_ title: NSString, _ alignment: NSTextAlignment = .left, _ font: UIFont = UIFont.systemFont(ofSize: 15)) {
-        self.label.text = title as String
-        self.label.textAlignment = alignment
-        self.label.font = font
-        self.label.sizeToFit()
-    }
-    
-    func <#name#>(<#parameters#>) -> <#return type#> {
-        <#function body#>
+        self.contentLabel.text = title as String
+        self.contentLabel.textAlignment = alignment
+        self.contentLabel.font = font
+        self.contentLabel.sizeToFit()
     }
 }
