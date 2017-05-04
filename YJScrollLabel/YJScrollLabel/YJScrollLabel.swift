@@ -12,7 +12,7 @@ class ScrollLabel: UIView {
     
     private var scrollView: UIScrollView!
     private var contentLabel: UILabel!
-    var scrollInterval: Double = 10 // scrollInterval: defualt 10s
+    public var scrollInterval: Double = 10 // scrollInterval: defualt 10s
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -78,7 +78,7 @@ class ScrollLabel: UIView {
      * alignment: 文字对齐方式
      * font: 字体大小
      */
-    func setTitle(_ title: NSString, _ color: UIColor = UIColor.black, _ alignment: NSTextAlignment = .left, _ font: UIFont = UIFont.systemFont(ofSize: 15)) {
+    public func setTitle(_ title: NSString, _ color: UIColor = UIColor.black, _ alignment: NSTextAlignment = .left, _ font: UIFont = UIFont.systemFont(ofSize: 15)) {
         self.contentLabel.text = title as String
         self.contentLabel.textAlignment = alignment
         self.contentLabel.font = font
