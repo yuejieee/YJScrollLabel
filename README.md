@@ -8,7 +8,7 @@
 
 ## Requirements
 
-Swift 3.0 <br>
+Swift 3.0+ <br>
 Xcode 8 <br>
 iOS 8.0+
 
