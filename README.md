@@ -10,7 +10,7 @@
 
 Swift 3.0 <br>
 Xcode 8 <br>
-iOS 9.0+
+iOS 8.0+
 
 ## Installation
 
